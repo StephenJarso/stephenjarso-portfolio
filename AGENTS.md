@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep portfolio projects and skills in shared typed data modules so overview and case-study pages remain consistent; this prevents content drift.
+- Use native CSS reveal and system-flow motion with reduced-motion fallbacks; this keeps the editorial site lightweight and accessible.
