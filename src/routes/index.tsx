@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Braces, Boxes, Code2, Database, Github, Mail, Network, Server, ShieldCheck } from "lucide-react";
-import { ContactBand, PhotoFrame, SectionHeading } from "@/components/portfolio/PageElements";
+import { ContactBand, SectionHeading } from "@/components/portfolio/PageElements";
 import { ProjectCard } from "@/components/portfolio/ProjectCard";
+import { TalksGallery } from "@/components/portfolio/TalksGallery";
 import { buildAreas, diagramIcons, journey, projects, skills, talksEvents } from "@/data/portfolio";
 
 export const Route = createFileRoute("/")({
@@ -43,7 +44,7 @@ function HomePage() {
 
     <section className="journey-section"><div className="container"><SectionHeading eyebrow="05 / Journey" title="The path so far" copy="A progression toward understanding more of the system, from the interaction surface to its operating environment."/><div className="journey-list">{journey.map(([title,text])=><article className="journey-step" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-    <section><div className="container"><SectionHeading eyebrow="06 / Talks & events" title="Out in the community." copy="Talks Stephen has given and events he has attended. Photos and details are placeholders until the real ones are shared."/><div className="talks-grid">{talksEvents.map((item,index)=><article className="talk-card" key={index}><PhotoFrame label={item.placeholderNote}/><div className="talk-meta"><span className="talk-kind">{item.kind}</span><h3>{item.title}</h3><span className="placeholder-label">Details to add</span></div></article>)}</div></div></section>
+    <section><div className="container"><SectionHeading eyebrow="06 / Talks & events" title="Out in the community." copy="Talks Stephen has given and events he has attended. Photos and details are placeholders until the real ones are shared."/><TalksGallery items={talksEvents}/></div></section>
 
     <section><div className="container"><SectionHeading eyebrow="07 / Open source" title="Code in the open." copy="Repositories and contribution activity will appear here once Stephen’s public GitHub profile and selected repository links are connected."/><div className="github-panel"><div className="project-kicker"><span>GitHub / Public work</span><Github size={16}/></div><h3>The work should speak for itself.</h3><p>This area is intentionally waiting for real repository data rather than presenting invented contribution counts or activity.</p><span className="placeholder-label">Profile link to add</span></div></div></section>
 

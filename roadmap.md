@@ -7,5 +7,6 @@
 - [x] Add per-page metadata and crawler support
 - [ ] Add sitemap after a public domain is connected (blocked: no public URL yet)
 - [x] Verify desktop and mobile presentation, interactions, and errors
+- [x] Add an accessible Talks & Events lightbox with keyboard navigation
 - [ ] Replace talks/events placeholders with real photos and details (blocked: Stephen to share photos)
 - [ ] Replace About portrait placeholder with real photo (blocked: Stephen to share photo)
