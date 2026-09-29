@@ -90,3 +90,12 @@ export const journey = [
 
 export const diagramIcons = [Code2, GitBranch, Network, Database, Boxes, ShieldCheck];
 export const topicIcons = { Bot, FileSearch, Leaf };
+
+export type TalkEvent = { title: string; kind: "Talk" | "Event"; placeholderNote: string };
+
+// Editable placeholders — replace titles, kinds, and photos with Stephen's real talks and events.
+export const talksEvents: TalkEvent[] = [
+  { title: "Talk title to add", kind: "Talk", placeholderNote: "Photo to add" },
+  { title: "Event name to add", kind: "Event", placeholderNote: "Photo to add" },
+  { title: "Talk title to add", kind: "Talk", placeholderNote: "Photo to add" },
+];
