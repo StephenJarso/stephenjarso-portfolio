@@ -805,17 +805,12 @@ Not:
 
 Prioritize clarity, credibility, technical depth, typography, whitespace, and excellent project presentation over decorative effects.
 
-This project was built with [Lovable](https://lovable.dev).
+## About
 
-**Live app**: https://code-to-cloud-studio.lovable.app
+Built by Stephen Jarso with TypeScript, React 19, TanStack Start (SSR),
+Tailwind CSS v4, and Nitro — deployed to Cloudflare Workers.
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b54319a6-512a-47ec-835a-5932762bb749).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **Source**: https://github.com/StephenJarso/stephenjarso-portfolio
 
 ## Development
 
