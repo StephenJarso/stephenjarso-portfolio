@@ -10,3 +10,6 @@
 - [x] Add an accessible Talks & Events lightbox with keyboard navigation
 - [ ] Replace talks/events placeholders with real photos and details (blocked: Stephen to share photos)
 - [ ] Replace About portrait placeholder with real photo (blocked: Stephen to share photo)
+- [ ] Reframe the homepage as an interactive colony-style engineering journey
+- [ ] Add generated artwork to all four projects
+- [ ] Add Stephen's verified LinkedIn, GitHub, and email links across the portfolio
