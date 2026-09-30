@@ -12,8 +12,10 @@ export default defineConfig(async ({ mode }) => {
   }
 
   const { nitro } = await import("nitro/vite");
+  const isProduction = mode === "production";
 
   return {
+    base: isProduction ? "/stephenjarso-portfolio/" : "/",
     server: { host: "::", port: 8080 },
     define: envDefine,
     css: { transformer: "lightningcss" as const },
