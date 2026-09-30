@@ -4,7 +4,7 @@ import { ContactBand, SectionHeading } from "@/components/portfolio/PageElements
 import { ProjectCard } from "@/components/portfolio/ProjectCard";
 import { TalksGallery } from "@/components/portfolio/TalksGallery";
 import { JourneyMap } from "@/components/portfolio/JourneyMap";
-import { buildAreas, diagramIcons, journey, projects, skills, talksEvents } from "@/data/portfolio";
+import { buildAreas, projects, skills, talksEvents } from "@/data/portfolio";
 
 export const Route = createFileRoute("/")({
   head: () => ({
