@@ -67,7 +67,7 @@ h1 { font-size: clamp(4rem, 7.4vw, 7.5rem); } h2 { font-size: clamp(3rem, 5.2vw,
 .button-primary { background: var(--primary); color: var(--primary-foreground); }.button-secondary { color: var(--primary); }.button-primary:hover,.button-secondary:hover { transform: translateY(-2px); }
 .micro-links { display: flex; gap: 22px; font-size: 12px; color: var(--muted-foreground); }.micro-links span { cursor: not-allowed; }.micro-links a { border-bottom: 1px solid var(--border); }
 
-.command-hero { background:var(--foreground);color:var(--background);padding:42px 0; }
+.command-hero { min-height:auto;align-items:flex-start;background:var(--foreground);color:var(--background);padding:42px 0; }
 .command-shell { position:relative;display:grid;grid-template-columns:1fr 370px;border:1px solid color-mix(in oklab,var(--background) 15%,transparent);background:color-mix(in oklab,var(--foreground) 92%,var(--primary));overflow:hidden;box-shadow:0 30px 90px color-mix(in oklab,var(--foreground) 50%,transparent); }
 .command-grid { position:absolute;inset:0;opacity:.12;pointer-events:none;background-image:radial-gradient(var(--background) 1px,transparent 1px);background-size:30px 30px;mask-image:linear-gradient(to bottom,black,transparent 84%); }
 .command-accent { position:absolute;left:0;top:0;width:55%;height:3px;background:linear-gradient(90deg,var(--accent),var(--primary),transparent); }
