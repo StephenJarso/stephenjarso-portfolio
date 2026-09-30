@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Braces, Boxes, Code2, Database, Github, ImagePlus, Network, Radio, Server } from "lucide-react";
+import { ArrowRight, Braces, Boxes, Code2, Database, Github, Network, Radio, Server } from "lucide-react";
 import { ContactBand, SectionHeading } from "@/components/portfolio/PageElements";
 import { ProjectCard } from "@/components/portfolio/ProjectCard";
 import { TalksGallery } from "@/components/portfolio/TalksGallery";
@@ -33,8 +33,8 @@ function HomePage() {
     <section className="hero command-hero"><div className="container command-shell">
       <div className="command-grid" aria-hidden /><div className="command-accent" aria-hidden />
       <div className="commander-profile">
-        <div className="profile-frame" role="img" aria-label="Stephen Jarso profile photo placeholder">
-          <ImagePlus size={28} aria-hidden/><span>Profile image<br/>awaiting upload</span><i className="profile-scan"/><b>UNIT_ID: JARSO_S</b>
+        <div className="profile-frame">
+          <img src="/profile.jpeg" alt="Stephen Jarso" width={400} height={400} /><i className="profile-scan" aria-hidden /><b>UNIT_ID: JARSO_S</b>
         </div>
         <div className="hero-copy"><p className="command-label"><span/> Colony command / active</p><h1><small>Stephen Jarso</small>Building reliable systems from <em>code to deployment.</em></h1><p>Backend developer focused on Go, DevOps, and secure software systems. I build practical applications, APIs, developer tools, and infrastructure around real-world constraints.</p><div className="button-row"><Link to="/projects" className="button-primary">View projects <ArrowRight size={16}/></Link><Link to="/contact" className="button-secondary">Open channel</Link></div><div className="micro-links"><a href="https://github.com/StephenJarso" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/stephenjarso/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:stephenjacob815@gmail.com">Email</a></div></div>
       </div>
