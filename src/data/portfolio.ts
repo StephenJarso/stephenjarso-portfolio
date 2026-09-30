@@ -1,4 +1,8 @@
 import { Bot, Boxes, Code2, Database, FileSearch, GitBranch, Leaf, Network, ShieldCheck, TerminalSquare } from "lucide-react";
+import securePushImage from "@/assets/projects/secure-push.jpg";
+import agriChamaImage from "@/assets/projects/agrichama.jpg";
+import socialNetworkImage from "@/assets/projects/social-network.jpg";
+import guidelyImage from "@/assets/projects/guidely.jpg";
 
 export type Project = {
   slug: string;
@@ -15,6 +19,8 @@ export type Project = {
   decisions: string[];
   challenges: string[];
   learned: string;
+  imageSrc: string;
+  imageAlt: string;
 };
 
 export const projects: Project[] = [
@@ -28,6 +34,7 @@ export const projects: Project[] = [
     decisions: ["Go for a portable command-line workflow", "Detector-oriented architecture for focused checks", "Git and CI integration as first-class boundaries"],
     challenges: ["Balancing useful signals against noisy false positives", "Handling varied repository structures", "Keeping local feedback fast enough for everyday use"],
     learned: "Security tooling is most useful when its feedback is specific, timely, and built into an existing developer workflow."
+    ,imageSrc: securePushImage, imageAlt: "Conceptual security checkpoint scanning code before it reaches a protected repository"
   },
   {
     slug: "agrichama", name: "AgriChama", number: "02", category: "FinTech / Agriculture / PWA",
@@ -39,6 +46,7 @@ export const projects: Project[] = [
     decisions: ["Offline-first PWA behavior for unreliable connectivity", "PostgreSQL for relational financial records", "SMS as a practical notification channel"],
     challenges: ["Keeping financial state consistent across offline sessions", "Designing transparent group-level permissions", "Representing agriculture-specific lending risk"],
     learned: "Reliable software in constrained environments begins with the real operating context, not the ideal network conditions."
+    ,imageSrc: agriChamaImage, imageAlt: "Connected agricultural community illustrating AgriChama's group finance system"
   },
   {
     slug: "social-network", name: "Social Network", number: "03", category: "Full Stack / Backend",
@@ -50,6 +58,7 @@ export const projects: Project[] = [
     decisions: ["Clear client/API separation", "REST endpoints for core resource workflows", "WebSockets for event-driven communication"],
     challenges: ["Coordinating real-time and persisted state", "Keeping authorization rules consistent across features", "Managing interconnected social entities"],
     learned: "Feature-rich systems benefit from explicit boundaries and consistent authorization more than clever abstractions."
+    ,imageSrc: socialNetworkImage, imageAlt: "Connected social profiles, application services, and database nodes"
   },
   {
     slug: "guidely", name: "Guidely", number: "04", category: "AI / RAG",
@@ -61,6 +70,7 @@ export const projects: Project[] = [
     decisions: ["Explicit pipeline stages for easier evaluation", "Sentence Transformers for local embedding experiments", "Semantic retrieval before answer generation"],
     challenges: ["Choosing useful chunk boundaries", "Evaluating retrieval quality", "Preserving enough context without flooding the prompt"],
     learned: "The quality of a RAG system depends heavily on information preparation and retrieval, not only the final model response."
+    ,imageSrc: guidelyImage, imageAlt: "Documents moving through chunking, embeddings, and semantic retrieval"
   }
 ];
 

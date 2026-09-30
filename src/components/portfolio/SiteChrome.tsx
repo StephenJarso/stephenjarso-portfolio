@@ -39,7 +39,7 @@ export function SiteFooter() {
       <div className="footer-top">
         <div><Link to="/" className="footer-name">Stephen Jarso</Link><p>Backend Developer • Go • DevOps • Security</p></div>
         <div className="footer-links">
-          <span>GitHub</span><span>LinkedIn</span><Link to="/contact">Email</Link><span>Resume</span>
+          <a href="https://github.com/StephenJarso" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/stephenjarso/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:stephenjacob815@gmail.com">Email</a><span>Resume</span>
         </div>
       </div>
       <div className="footer-bottom"><span>© 2026 Stephen Jarso</span><span>Building beyond the interface.</span></div>

@@ -16,7 +16,7 @@ export function ProjectCard({ project, reverse = false }: { project: Project; re
           <Link to="/projects/$slug" params={{ slug: project.slug }} className="text-link">Read case study <ArrowRight size={16} /></Link>
         </div>
       </div>
-      <ProjectVisual flow={project.flow} label={project.name} variant={project.slug === "social-network" ? "vertical" : "horizontal"} />
+      <ProjectVisual flow={project.flow} label={project.name} imageSrc={project.imageSrc} imageAlt={project.imageAlt} variant={project.slug === "social-network" ? "vertical" : "horizontal"} />
     </article>
   );
 }
