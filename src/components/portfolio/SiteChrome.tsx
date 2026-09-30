@@ -17,7 +17,7 @@ export function SiteHeader() {
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {links.map(([label, to]) => <Link key={to} to={to} activeProps={{ className: "nav-active" }}>{label}</Link>)}
-          <span className="resume-link" aria-label="Resume link unavailable">Resume <ArrowUpRight size={13} /></span>
+          <a className="resume-link" href="/stephen-jarso-resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight size={13} /></a>
         </nav>
         <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Close menu" : "Open menu"}>
           {open ? <X size={21} /> : <Menu size={21} />}
@@ -26,7 +26,7 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
           {links.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={15} /></Link>)}
-          <span>Resume <span className="placeholder-label">Link to add</span></span>
+          <a href="/stephen-jarso-resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight size={15} /></a>
         </nav>
       )}
     </header>

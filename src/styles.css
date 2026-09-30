@@ -45,7 +45,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-mark { display: grid; width: 32px; height: 32px; flex: 0 0 auto; place-items: center; border: 1px solid var(--foreground); font-family: var(--font-serif); font-size: 15px; }
 .desktop-nav { display: flex; align-items: center; gap: 26px; font-size: 13px; color: var(--muted-foreground); }
 .desktop-nav a { transition: color .2s ease; }.desktop-nav a:hover,.desktop-nav .nav-active { color: var(--foreground); }
-.resume-link { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); padding: 6px 10px; color: var(--muted-foreground); cursor: not-allowed; }
+.resume-link { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); padding: 6px 10px; color: var(--muted-foreground); transition: color .2s ease, border-color .2s ease; }.resume-link:hover { color: var(--foreground); border-color: var(--foreground); }
 .menu-button { display: none; width: 42px; height: 42px; place-items: center; border: 1px solid var(--border); background: var(--background); color: var(--foreground); }
 .mobile-nav { display: none; }
 
