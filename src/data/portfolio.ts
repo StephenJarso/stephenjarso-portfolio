@@ -107,6 +107,17 @@ export type TalkEvent = {
   imageAlt?: string;
 };
 
+export const writingTopics = [
+  "Understanding HTTP from first principles",
+  "Building APIs with Go",
+  "Docker from first principles",
+  "Understanding idempotency in payment systems",
+  "Designing offline-first applications",
+  "Lessons from building Secure Push",
+  "SQLite vs PostgreSQL",
+  "Understanding networking as a backend developer",
+];
+
 // Editable placeholders — replace titles, kinds, and photos with Stephen's real talks and events.
 export const talksEvents: TalkEvent[] = [
   { title: "Talk title to add", kind: "Talk", placeholderNote: "Photo to add", caption: "Talk details and photo will be added when Stephen shares them." },
