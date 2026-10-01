@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Expand, ImagePlus } from "lucide-react";
+import { ChevronLeft, ChevronRight, ImagePlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -47,7 +47,6 @@ export function TalksGallery({ items }: TalksGalleryProps) {
                     <span className="placeholder-label">{item.placeholderNote}</span>
                   </span>
                 )}
-                <span className="gallery-expand" aria-hidden="true"><Expand size={16} /></span>
               </Button>
             </DialogTrigger>
             <div className="talk-meta">

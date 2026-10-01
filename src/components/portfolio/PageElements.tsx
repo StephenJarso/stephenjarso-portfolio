@@ -1,10 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ImagePlus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function PhotoFrame({ label, ratio = "wide" }: { label: string; ratio?: "wide" | "portrait" }) {
   return (
     <div className={`photo-frame is-${ratio}`} role="img" aria-label={`${label} — placeholder, photo to be added`}>
-      <ImagePlus size={22} aria-hidden />
       <span className="placeholder-label">{label}</span>
     </div>
   );
