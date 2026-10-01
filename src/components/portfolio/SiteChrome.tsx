@@ -4,8 +4,8 @@ import { useState } from "react";
 import { withBase } from "@/lib/paths";
 
 const links = [
-  ["About", "/about"], ["Projects", "/projects"], ["Skills", "/skills"],
-  ["Experience", "/experience"], ["Writing", "/writing"], ["Contact", "/contact"],
+  ["Approach", "#approach"], ["Work", "#work"], ["Toolkit", "#toolkit"],
+  ["Journey", "#journey"], ["Writing", "#writing"], ["Contact", "#contact"],
 ] as const;
 
 export function SiteHeader() {
@@ -13,11 +13,11 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link to="/" className="brand" aria-label="Stephen Jarso, home">
+        <a href="#top" className="brand" aria-label="Stephen Jarso, home">
           <span className="brand-mark">SJ</span><span>Stephen Jarso</span>
-        </Link>
+        </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          {links.map(([label, to]) => <Link key={to} to={to} activeProps={{ className: "nav-active" }}>{label}</Link>)}
+          {links.map(([label, to]) => <a key={to} href={to}>{label}</a>)}
           <a className="resume-link" href={withBase("/stephen-jarso-resume.pdf")} target="_blank" rel="noreferrer">Resume <ArrowUpRight size={13} /></a>
         </nav>
         <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Close menu" : "Open menu"}>
@@ -26,7 +26,7 @@ export function SiteHeader() {
       </div>
       {open && (
         <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
-          {links.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={15} /></Link>)}
+          {links.map(([label, to]) => <a key={to} href={to} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={15} /></a>)}
           <a href={withBase("/stephen-jarso-resume.pdf")} target="_blank" rel="noreferrer">Resume <ArrowUpRight size={15} /></a>
         </nav>
       )}
@@ -38,7 +38,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <div><Link to="/" className="footer-name">Stephen Jarso</Link><p>Backend Developer • Go • DevOps • Security</p></div>
+        <div><a href="#top" className="footer-name">Stephen Jarso</a><p>Backend Developer • Go • DevOps • Security</p></div>
         <div className="footer-links">
           <a href="https://github.com/StephenJarso" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/stephenjarso/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:stephenjacob815@gmail.com">Email</a><a href={withBase("/stephen-jarso-resume.pdf")} target="_blank" rel="noreferrer">Resume</a>
         </div>
