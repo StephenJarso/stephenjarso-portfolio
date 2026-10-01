@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Github } from "lucide-react";
+import { withBase } from "@/lib/paths";
 import { ContactBand, SectionHeading } from "@/components/portfolio/PageElements";
 import { ProjectCard } from "@/components/portfolio/ProjectCard";
 import { TalksGallery } from "@/components/portfolio/TalksGallery";
@@ -37,7 +38,7 @@ function HomePage() {
           <div><span>Status</span><strong>Open to work</strong></div>
         </div>
       </div>
-      <div className="hero-portrait"><img src="/profile.jpeg" alt="Stephen Jarso" width={400} height={400} /></div>
+      <div className="hero-portrait"><img src={withBase("/profile.jpeg")} alt="Stephen Jarso" width={400} height={400} /></div>
     </div></section>
 
     <section className="intro-band"><div className="container intro-layout"><p className="eyebrow">01 / Approach</p><div className="intro-copy"><h2>Engineering beyond the interface.</h2><p>I started by building what people could see. Over time, I became more interested in everything supporting it: how requests move, how data is modeled, how services communicate, how software is deployed, and where systems can fail or be misused.</p><div className="progression">{["Mobile / Full Stack","Backend","Go","DevOps","Security"].map(x=><div className="progress-step" key={x}>{x}</div>)}</div></div></div></section>

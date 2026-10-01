@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Mail, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { withBase } from "@/lib/paths";
 
 const links = [
   ["About", "/about"], ["Projects", "/projects"], ["Skills", "/skills"],
@@ -17,7 +18,7 @@ export function SiteHeader() {
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {links.map(([label, to]) => <Link key={to} to={to} activeProps={{ className: "nav-active" }}>{label}</Link>)}
-          <a className="resume-link" href="/stephen-jarso-resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight size={13} /></a>
+          <a className="resume-link" href={withBase("/stephen-jarso-resume.pdf")} target="_blank" rel="noreferrer">Resume <ArrowUpRight size={13} /></a>
         </nav>
         <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Close menu" : "Open menu"}>
           {open ? <X size={21} /> : <Menu size={21} />}
@@ -26,7 +27,7 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
           {links.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={15} /></Link>)}
-          <a href="/stephen-jarso-resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight size={15} /></a>
+          <a href={withBase("/stephen-jarso-resume.pdf")} target="_blank" rel="noreferrer">Resume <ArrowUpRight size={15} /></a>
         </nav>
       )}
     </header>
@@ -39,7 +40,7 @@ export function SiteFooter() {
       <div className="footer-top">
         <div><Link to="/" className="footer-name">Stephen Jarso</Link><p>Backend Developer • Go • DevOps • Security</p></div>
         <div className="footer-links">
-          <a href="https://github.com/StephenJarso" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/stephenjarso/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:stephenjacob815@gmail.com">Email</a><a href="/stephen-jarso-resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="https://github.com/StephenJarso" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/stephenjarso/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:stephenjacob815@gmail.com">Email</a><a href={withBase("/stephen-jarso-resume.pdf")} target="_blank" rel="noreferrer">Resume</a>
         </div>
       </div>
       <div className="footer-bottom"><span>© 2026 Stephen Jarso</span><span>Building beyond the interface.</span></div>
