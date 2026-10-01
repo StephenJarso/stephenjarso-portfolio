@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Check, Code2, Container, Layers3, LockKeyhole, Server, ShieldCheck, Smartphone } from "lucide-react";
+import { ArrowUpRight, Code2, Container, Layers3, LockKeyhole, Server, ShieldCheck, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { journey } from "@/data/portfolio";
 
@@ -21,17 +21,15 @@ export function JourneyMap() {
           const selected = active === index;
           return (
             <Button key={itemTitle} type="button" variant="ghost" role="tab" aria-selected={selected} className={`level-node ${selected ? "is-active" : ""}`} onClick={() => setActive(index)}>
-              <span className="level-number">{String(index + 1).padStart(2, "0")}</span>
               {LevelIcon ? <LevelIcon aria-hidden /> : null}
+              <span className="level-number">{String(index + 1).padStart(2, "0")}</span>
               <span>{itemTitle}</span>
-              {index <= active && <Check className="level-check" aria-hidden />}
             </Button>
           );
         })}
       </div>
       <div className="level-detail" role="tabpanel">
-        <div className="level-emblem">{Icon ? <Icon aria-hidden /> : null}</div>
-        <div><p className="eyebrow">{stageNames[active]}</p><h3>{title}</h3><p>{description}</p></div>
+        <div><p className="eyebrow">{stageNames[active] ?? ""}</p><h3>{title}</h3><p>{description}</p></div>
         <a href="#selected-work" className="text-link">Explore the builds <ArrowUpRight size={16} /></a>
       </div>
     </div>
