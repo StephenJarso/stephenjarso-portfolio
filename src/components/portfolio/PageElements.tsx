@@ -1,14 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-export function PhotoFrame({ label, ratio = "wide" }: { label: string; ratio?: "wide" | "portrait" }) {
-  return (
-    <div className={`photo-frame is-${ratio}`} role="img" aria-label={`${label} — placeholder, photo to be added`}>
-      <span className="placeholder-label">{label}</span>
-    </div>
-  );
-}
-
 export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) {
   return <header className="page-intro"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><div className="page-lede">{children}</div></header>;
 }
