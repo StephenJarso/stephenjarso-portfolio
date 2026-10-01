@@ -1,9 +1,8 @@
-import { ArrowDown, ArrowRight, Check, CircleDot, Radio } from "lucide-react";
+import { ArrowDown, ArrowRight, Check } from "lucide-react";
 
 export function ProjectVisual({ flow, label, imageSrc, imageAlt, variant = "horizontal" }: { flow: string[]; label?: string; imageSrc?: string; imageAlt?: string; variant?: "horizontal" | "vertical" }) {
   return (
     <div className={`project-visual ${variant === "vertical" ? "is-vertical" : ""}`} aria-label={`${label ?? "System"} architecture flow`}>
-      <div className="visual-top"><span><CircleDot size={12} /> system.flow</span><span className="status"><Radio size={12} /> active</span></div>
       {imageSrc && <div className="project-artwork"><img src={imageSrc} alt={imageAlt ?? ""} loading="lazy" width={1408} height={912} /></div>}
       <div className="flow-track">
         {flow.map((item, index) => (
@@ -13,7 +12,6 @@ export function ProjectVisual({ flow, label, imageSrc, imageAlt, variant = "hori
           </div>
         ))}
       </div>
-      <div className="visual-log"><span>$</span> pipeline completed without errors<span className="cursor" /></div>
     </div>
   );
 }
