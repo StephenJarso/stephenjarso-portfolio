@@ -5,9 +5,9 @@ import { ProjectVisual } from "./ProjectVisual";
 
 export function ProjectCard({ project, reverse = false }: { project: Project; reverse?: boolean }) {
   return (
-    <article className={`project-card tone-${project.tone} ${reverse ? "is-reverse" : ""}`}>
+    <article className={`project-card ${reverse ? "is-reverse" : ""}`}>
       <div className="project-copy">
-        <div className="project-kicker"><span>{project.number}</span><span>{project.category}</span></div>
+        <div className="project-kicker">{project.category}</div>
         <h3>{project.name}</h3>
         <p>{project.description}</p>
         <ul className="tags" aria-label="Technologies">{project.technologies.map((tech) => <li key={tech}>{tech}</li>)}</ul>
@@ -16,7 +16,7 @@ export function ProjectCard({ project, reverse = false }: { project: Project; re
           <Link to="/projects/$slug" params={{ slug: project.slug }} className="text-link">Read case study <ArrowRight size={16} /></Link>
         </div>
       </div>
-      <ProjectVisual flow={project.flow} label={project.name} imageSrc={project.imageSrc} imageAlt={project.imageAlt} variant={project.slug === "social-network" ? "vertical" : "horizontal"} />
+      <ProjectVisual imageSrc={project.imageSrc} imageAlt={project.imageAlt} />
     </article>
   );
 }
