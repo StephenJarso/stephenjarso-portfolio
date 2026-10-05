@@ -14,9 +14,15 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.technologies.map((tech) => <li key={tech}>{tech}</li>)}
         </ul>
         <div className="project-actions">
-          <span className="text-link is-muted" aria-label="GitHub repository link to add">
-            <Github size={16} /> GitHub <small>link to add</small>
-          </span>
+          {project.githubUrl ? (
+            <a href={project.githubUrl} target="_blank" rel="noreferrer" className="text-link">
+              <Github size={16} /> GitHub
+            </a>
+          ) : (
+            <span className="text-link is-muted" aria-label="GitHub repository not yet public">
+              <Github size={16} /> GitHub <small>link to add</small>
+            </span>
+          )}
           <Link to="/projects/$slug" params={{ slug: project.slug }} className="text-link">
             Read case study <ArrowRight size={16} />
           </Link>

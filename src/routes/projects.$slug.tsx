@@ -50,10 +50,20 @@ function CaseStudy() {
         <Case title="What I learned"><p>{project.learned}</p></Case>
         <Case title="Technologies used"><ul className="tags">{project.technologies.map((t) => <li key={t}>{t}</li>)}</ul></Case>
         <Case title="Repository &amp; demo">
-          <PlaceholderNotice>Repository and live demo links have not been supplied yet.</PlaceholderNotice>
-          <div className="case-links">
-            <span className="button-secondary"><Github size={16} /> GitHub link to add</span>
-          </div>
+          {project.githubUrl ? (
+            <div className="case-links">
+              <a href={project.githubUrl} target="_blank" rel="noreferrer" className="button-secondary">
+                <Github size={16} /> View on GitHub
+              </a>
+            </div>
+          ) : (
+            <>
+              <PlaceholderNotice>Repository and live demo links have not been supplied yet.</PlaceholderNotice>
+              <div className="case-links">
+                <span className="button-secondary"><Github size={16} /> GitHub link to add</span>
+              </div>
+            </>
+          )}
         </Case>
       </div>
     </main>
