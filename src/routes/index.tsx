@@ -45,7 +45,7 @@ function HomePage() {
 
     <section id="focus"><div className="container"><SectionHeading eyebrow="02 / Focus" title="What I build" copy="Practical software shaped around clear boundaries, dependable behavior, and the environments where it needs to run."/><div className="build-grid">{buildAreas.map(({title,text})=><article className="build-item" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-    <section id="work"><div className="container"><SectionHeading eyebrow="03 / Selected work" title="Systems, tools, and useful experiments." copy="Each project solves a different practical problem—designed, built, and documented end to end."/><div className="project-list">{projects.map((project,index)=><ProjectCard key={project.slug} project={project} reverse={index%2===1}/>)}</div></div></section>
+    <section id="work"><div className="container"><SectionHeading eyebrow="03 / Selected work" title="Systems, tools, and useful experiments." copy="Each project solves a different practical problem—designed, built, and documented end to end."/><div className="project-list">{projects.map((project)=><ProjectCard key={project.slug} project={project}/>)}</div></div></section>
 
     <section id="toolkit"><div className="container"><SectionHeading eyebrow="04 / Toolkit" title="Technical toolkit" copy="Organized around the work each technology helps me do—not arbitrary percentages."/><div className="toolkit-grid">{skills.map(group=><div className="skill-group" key={group.category}><h3>{group.category}</h3><ul>{group.items.map(item=><li key={item}>{item}</li>)}</ul></div>)}</div></div></section>
 
